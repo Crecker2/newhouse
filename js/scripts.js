@@ -30,16 +30,27 @@ $(document).ready(function(){
 
 	 var answers = [
 	 	{ "id": "question_1",
-	 	  "answer": false },
+	 	  "answer": "B" },
 	 	{ "id": "question_2",
-	 	  "answer": true },
+	 	  "answer": "false" },
 	 	{ "id": "question_3",
-	 	  "answer": false }
+	 	  "answer": "C" },
+	 	{ "id": "question_4",
+	 	  "answer": "D"},
+	 	{ "id": "question_5",
+	 	  "answer": "true"},
+	 	{ "id": "question_6",
+	 	  "answer": "false"},
+	 	{ "id": "question_7",
+	 	  "answer": "false"},
+	 	{ "id": "question_8",
+	 	  "answer": "false"}
+
 	 ];
 	 
 	 $('button.answer').click(function(){
 	 	$('fieldset.' + this.name).attr('disabled','disabled');
-	 	var input = $.parseJSON($(this).attr('value'));
+	 	var input = $(this).attr('value');
 	 	for(var i = 0; i<answers.length; i++){
 	 		if(answers[i].id == $(this).attr('name')){
 	 			if(answers[i].answer == input){
