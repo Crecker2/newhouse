@@ -50,6 +50,7 @@ $(document).ready(function(){
 	 
 	 $('button.answer').click(function(){
 	 	$('fieldset.' + this.name).attr('disabled','disabled');
+		$('fieldset.' + this.name + ' button').css('background-color','grey');
 	 	var input = $(this).attr('value');
 	 	for(var i = 0; i<answers.length; i++){
 	 		if(answers[i].id == $(this).attr('name')){
